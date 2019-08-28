@@ -1,0 +1,42 @@
+$router->get('/supplier/create', [
+
+
+    'uses' => 'SuppliersController@create',
+    'as' => 'supplier.create'
+
+]);
+
+$router->post('/supplier/store', [
+
+
+    'uses' => 'SuppliersController@store',
+    'as' => 'supplier.store'
+
+]);
+$router->get('/suppliers', [
+
+
+    'uses' => 'SuppliersController@index',
+    'as' => 'suppliers'
+
+]);
+
+$router->get('/suppliers/edit/{id}', [
+
+
+    'uses' => 'SuppliersController@edit',
+    'as' => 'suppliers.edit'
+
+]);
+$router->post('/suppliers/update/{id}', [
+    'uses' => 'SuppliersController@updateSupplier',
+    'as' => 'suppliers.update'
+
+]);
+$router->get('/suppliers/delete/{id}', [
+
+
+    'uses' => 'SuppliersController@deleteSupplier',
+    'as' => 'suppliers.delete'
+
+]);
